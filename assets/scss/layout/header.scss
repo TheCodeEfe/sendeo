@@ -1,0 +1,15 @@
+@use "../util/"as *;
+
+header{
+    background-color: white;
+    padding: rem(25.5) rem(25.5);
+    @include breakpoint-down(small) {
+        padding: rem(20) rem(16);
+        backdrop-filter: blur(32px);
+    }
+    .head{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}

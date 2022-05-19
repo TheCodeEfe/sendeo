@@ -1,0 +1,17 @@
+@import "../util/functions";
+.btn {
+  padding: rem(8) rem(16);
+  border-radius: rem(128);
+  -webkit-border-radius: rem(128);
+  -moz-border-radius: rem(128);
+  -ms-border-radius: rem(128);
+  -o-border-radius: rem(128);
+  font-weight: 700;
+  font-size: rem(14);
+  width: fit-content;
+  color: white;
+}
+.btn-green{
+  background-color: #00BB59;
+  font-style: italic;
+}

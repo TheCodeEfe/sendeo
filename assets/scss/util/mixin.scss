@@ -1,0 +1,31 @@
+@use "functions" as *;
+// =
+@mixin border($bor) {
+  border-radius: $bor;
+  -webkit-border-radius: $bor;
+  -moz-border-radius: $bor;
+  -ms-border-radius: $bor;
+  -o-border-radius: $bor;
+}
+//transition
+@mixin TransitionEffect($par) {
+  transition: $par all;
+  -webkit-transition: $par all;
+  -moz-transition: $par all;
+  -ms-transition: $par all;
+  -o-transition: $par all;
+}
+// = Clear butc
+@mixin clear {
+  &:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}
+// Flex Center
+@mixin flex {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}

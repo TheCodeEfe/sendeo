@@ -1,0 +1,166 @@
+@use "../util/"as *;
+.form{
+    margin-top: rem(80);
+    form{
+        @include breakpoint-down(small) {
+            padding: 0px 8px;
+        }
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        
+    }
+    &__title{
+        p{
+            @include breakpoint-down(small) {
+                margin-top: rem(16);
+            }
+            text-align: center;
+            font-weight: 400;
+            font-size: 16px;
+            color: #FFFFFF;
+        }
+        h1{
+            @include breakpoint-down(small) {
+                text-align: center;
+                font-size: rem(32);
+            }
+            font-size: rem(46);
+            text-align: center;
+            font-weight: 600;
+            color: #FFFFFF;
+            
+        }
+    }
+    &__content{
+        @include breakpoint-down(small) {
+            width: 100%;
+        }
+        &-bg{
+            &-text{
+                &-box{
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    margin-top: rem(16);
+                    &:nth-child(1){
+                        margin-top: 0;
+                    }
+                }
+                display: flex;
+                flex-direction: column;
+                span{
+                    font-weight:400;
+                    font-style: italic;
+                    font-size: 16px;
+                    color: #fff;
+                    a{
+                        text-decoration: underline;
+                        color: #fff;
+                        font-weight:600;
+                    }
+                }
+            }
+            input[type='checkbox'] {
+                margin-right: rem(8);
+                width: rem(16);
+                height: rem(16);
+                border: 1px solid #79DEA8;
+                border-radius: 2px;
+                background: #fff;
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                outline: none;
+                display: inline-block;
+                vertical-align: top;
+                position: relative;
+                cursor: pointer;
+                border: 1px solid #79DEA8;
+                  &:checked {
+                      position: relative;
+                      &::after{
+                          content: ' ';
+                          position: absolute;
+                          left: 50%;
+                          top: 50%;
+                          transform: translate(-50%,-50%);
+                          width: rem(10);
+                          height: rem(10);
+                          border-radius: rem(2);
+                          background: #007939;
+                          -webkit-border-radius: rem(2);
+                          -moz-border-radius: rem(2);
+                          -ms-border-radius: rem(2);
+                          -o-border-radius: rem(2);
+                    }
+                }
+                  &:focus {
+                    box-shadow: 0 0 0 var(--focus);
+                  }
+            }
+            position: relative;
+            margin-top: rem(24);
+            .label{
+                position: absolute;
+                display: inline-block;
+                left: rem(16);
+                top: rem(16);
+                font-style: italic;
+                font-weight: 600;
+                font-size: 18px;
+                color: #A7A9AC;
+                transition: all 0.2s;
+            }
+            input[type='text']{
+                &:focus + .label {
+                    font-size: rem(12);
+                    top: rem(4);
+                }
+                left: rem(0);
+                min-width: rem(384);
+                width: 100%;
+                height: rem(58);
+                @include breakpoint-down(small) {
+                    max-width: rem(343);
+                    min-width: auto;
+                }
+                top: rem(0);
+                font-size: rem(16);
+                font-weight: 400;
+                padding: rem(4) rem(16);
+                border-radius: rem(8);
+                transition: all 0.2s;
+                -webkit-border-radius: rem(8);
+                -moz-border-radius: rem(8);
+                -ms-border-radius: rem(8);
+                -o-border-radius: rem(8);
+                border: rem(1) solid rgba(255, 255, 255, 0.64);
+                padding-top: rem(16);
+            }
+        }
+    }
+    &__footer{
+        margin-top: rem(44);
+        @include breakpoint-down(small) {
+            width: 100%;
+        }
+        button{
+            padding: rem(12) rem(24);
+            background: rgba(0, 103, 255, 1) !important;  
+            font-style: italic;
+            font-weight: 700;
+            font-size: rem(18.0533);
+            &:hover{
+                background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), #0067FF !important; 
+                color: #fff !important;
+            }
+        }
+        button.btn100{
+            @include breakpoint-down(small) {
+                width: 100%;
+            }
+        }
+    }
+}
+

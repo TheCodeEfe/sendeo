@@ -1,0 +1,28 @@
+/* thecode */
+.modal-content{
+    border-radius: 1rem;
+  }
+  
+  .vericationButton{
+    background-color: #0067ff !important;
+  }
+  
+  
+  .modal-title img {
+    width: 96px !important;
+    height: 96px !important;
+    margin-top: 48px;
+    margin-bottom: 32px;
+  }
+  
+  iframe{
+    width: 1207px;
+    height: 676px;
+  }
+  
+  @media (max-width:600px) {
+    iframe{
+      width: 375px;
+      height: 211px;
+    }  
+  }

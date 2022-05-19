@@ -1,0 +1,71 @@
+@use "../util/"as *;
+.slide{
+    text-align: center;
+    margin-top: rem(24);
+    @include breakpoint-down(large) {
+        margin-top: 0;
+    }
+    @include breakpoint-up(large){
+        margin-top: 0;
+    }
+    &__btn{
+        margin-top: rem(-72);
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
+        a{
+            height: 56px;
+            min-width: rem(228);
+            justify-content: center;
+            font-style: italic;
+            @include breakpoint-down(small) {
+                width: 100%;
+            }
+            font-size: rem(18.5);
+            background-color: rgba(0, 103, 255, 1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: all 0.2s;
+            animation: bn13bouncy 2s infinite linear;
+            position: relative;
+            @keyframes bn13bouncy {
+                0% {
+                  top: 0em;
+                }
+                50% {
+                  top: -0.9em;
+                }
+                100% {
+                  top: 0em;
+                }
+              }
+            &:hover{
+                background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), #0067FF;
+                color: #fff !important;
+            }
+        }
+    }
+    img.soru-img{
+        margin-top: rem(24);
+        max-width: rem(856);
+        border-radius: rem(24);
+        -webkit-border-radius: rem(24);
+        -moz-border-radius: rem(24);
+        -ms-border-radius: rem(24);
+        -o-border-radius: rem(24);
+        @include breakpoint-down(small) {
+            margin-top: 0;
+            border-radius: 0px;
+            -webkit-border-radius: 0px;
+            -moz-border-radius: 0px;
+            -ms-border-radius: 0px;
+            -o-border-radius: 0px;
+        }
+    }
+    iframe{
+        max-width: rem(856);
+        margin-top: rem(24);
+    }
+}
