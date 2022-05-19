@@ -4,7 +4,7 @@ session_start();
 error_reporting(0); //hataları gizle ve error_log'a yazmasın.
 ini_set("display_errors",0); // hataları gizle
 
-$host   = 'localhost';
+$host   = '49.12.229.78';
 $dbName = 'sendeo';
 $user   = 'sendeo';
 $pass   = 'sendeo2022*';
